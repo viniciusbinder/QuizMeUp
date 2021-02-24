@@ -20,8 +20,8 @@ struct HomeView: View {
             Image("banner")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 80)
-                .padding(.horizontal).padding(.horizontal).padding(.horizontal)
+                .padding(.top, 30)
+                .padding(.horizontal).padding(.horizontal)
             
             Spacer()
             CategoryPickerView(category: $categoryID, shouldExpand: .constant(viewModel.state == .loaded))

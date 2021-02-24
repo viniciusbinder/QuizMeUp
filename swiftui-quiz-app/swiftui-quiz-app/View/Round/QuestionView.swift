@@ -42,7 +42,7 @@ struct QuestionView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background.edgesIgnoringSafeArea(.all))
-        .animation(Animation.spring())
+        .animation(.spring())
     }
 }
 

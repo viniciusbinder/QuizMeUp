@@ -90,7 +90,7 @@ struct RoundContainerView: View {
     private var transition: AnyTransition {
         switch viewModel.state {
         case .correctAnswer, .wrongAnswer: return .scale
-        default: return .asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom))
+        default: return .asymmetric(insertion: .move(edge: .top), removal: AnyTransition.opacity.animation(.easeIn(duration: 0.45)).combined(with: .move(edge: .bottom)))
         }
     }
 }

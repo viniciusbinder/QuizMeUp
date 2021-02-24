@@ -53,7 +53,7 @@ struct GameOverView: View {
             Button {
                 replay = true
             } label: {
-                Text("🔄 Replay")
+                Text("🤬 Retry")
                     .font(.poppins(weight: .bold, size: 24))
                     .foregroundColor(.black)
                     .padding()
@@ -70,7 +70,7 @@ struct GameOverView: View {
                     ingame = false
                 }
             } label: {
-                Text("⬅️ Exit")
+                Text("🤗 Exit")
                     .font(.poppins(weight: .bold, size: 24))
                     .foregroundColor(.black)
                     .padding()
