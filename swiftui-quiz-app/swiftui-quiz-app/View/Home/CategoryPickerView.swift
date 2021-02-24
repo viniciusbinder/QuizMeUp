@@ -112,7 +112,7 @@ struct CategoryPickerView: View {
             } label: {
                 categoryView(for: selection - 1)
             }
-            .buttonStyle(PressableButtonStyle(duration: 0.1))
+            .buttonStyle(PressableButtonStyle(minScale: 0.8, duration: 0.1))
             
             ZStack(alignment: .center) {
                 let category = viewModel.categories[selection]
