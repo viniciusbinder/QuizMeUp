@@ -1,6 +1,12 @@
-# 👾 Quiz me up!
+# 👾 Quiz Me Up!
 
-Quiz me up! is a trivia game created for the very first SwiftUI Jam! It features questions from the [Open Trivia Database](https://opentdb.com) and lots of SwiftUI! We were very excited to be able to improve our SwiftUI skills and software architecture knowledge. There was a lot of experimenting with custom transitions and animations! We had so much fun and the pleasure of spending the weekend with such a great community!
+Quiz Me Up! is a trivia game created in the very first SwiftUI Jam! It features questions from the [Open Trivia Database](https://opentdb.com) and lots of SwiftUI! We were very excited to be able to improve our SwiftUI skills and software architecture knowledge. There was a lot of experimenting with custom transitions and animations! We had so much fun and the pleasure of spending the weekend with such a great community!
+
+## 🏆 We Won!
+
+We're excited to announce we were awarded the Awesome Animations Award at the SwiftUI Jam! Thank you so much to the SwiftUI Jam team for picking us and to the rest of the community for making it an awesome event!
+
+[Check out the jam's blog](https://swiftuijam.com/awards-2021.html).
 
 ## 🚀 TestFlight
 
