@@ -4,7 +4,7 @@ Quiz Me Up! is a trivia game created in the very first SwiftUI Jam! It features 
 
 ## 🏆 We Won!
 
-We're excited to announce we were awarded the Awesome Animations Award at the SwiftUI Jam! Thank you so much to the SwiftUI Jam team for picking us and to the rest of the community for making it an awesome event!
+We're excited to announce we were awarded the **Awesome Animations Award** at the SwiftUI Jam! Thank you so much to the SwiftUI Jam team for picking us and to the rest of the community for making it an awesome event!
 
 [Check out the jam's blog](https://swiftuijam.com/awards-2021.html).
 
