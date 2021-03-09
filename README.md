@@ -36,7 +36,7 @@ Your cumulative lifetime score is stored on a global leaderboard!
 
 We're reactive!
 
-## 👯 Team
+## 👯 The Team
 
 ### Andressa Valengo | Design & Coding ([GitHub](https://github.com/valengo)) ([Linktree](https://linktr.ee/andycompartilha)) ([Dribbble](https://dribbble.com/Valengo))
 
