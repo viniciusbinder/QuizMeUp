@@ -44,7 +44,7 @@ class QuestionDataViewModel: ObservableObject {
     
     func load(for categoryId: Int, with difficulty: Difficulty) {
         state = .loading
-        self.service.getQuestions(withCategory: categoryId, difficulty: difficulty.rawValue, max: 10)
+        self.service.getQuestions(withCategory: categoryId, difficulty: difficulty.rawValue, max: 1)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] result in
                 switch result {
@@ -68,21 +68,6 @@ extension QuestionDataViewModel {
         case loaded
         case error
         case noData
-        
-//        func nextState(for event: Event) -> State {
-//            switch self {
-//            case .idle:
-//                return self
-//            case .loading:
-//                <#code#>
-//            case .loaded:
-//                <#code#>
-//            case .error:
-//                <#code#>
-//            case .noData:
-//                <#code#>
-//            }
-//        }
     }
     
     enum Event {

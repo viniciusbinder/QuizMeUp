@@ -52,6 +52,14 @@ struct GameOverView: View {
                 Text("⭐️")
                     .font(.poppins(weight: .semibold, size: 30))
             }
+            .confettiCannon(
+                counter: $confettiCounter,
+                num: 40,
+                confettiSize: 20,
+                rainHeight: 1200,
+                radius: 450,
+                repetitions: 10,
+                repetitionInterval: 2.5)
             .onAppear {
                 confettiCounter += 1
             }
@@ -90,15 +98,7 @@ struct GameOverView: View {
 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(Color.background.edgesIgnoringSafeArea(.all)
-            .confettiCannon(
-                counter: $confettiCounter,
-                num: 40,
-                confettiSize: 20,
-                rainHeight: 1200,
-                radius: 450,
-                repetitions: 10,
-                repetitionInterval: 2.5))
+        .background(Color.background.edgesIgnoringSafeArea(.all))
         .onAppear {
             replay = false
         }

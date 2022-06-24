@@ -18,6 +18,8 @@ struct RoundContainerView: View {
     @State var answer: String? = nil
     @State var answerCode: AnswerCode = .A
     
+    @State private var confettiCounter: Int = 0
+    
     var body: some View {
         VStack {
             Group {
@@ -66,25 +68,38 @@ struct RoundContainerView: View {
                 }
             }
         })
+        .confettiCannon(
+            counter: $confettiCounter,
+            num: 30,
+            confettiSize: 20,
+            rainHeight: 1200,
+            radius: 450,
+            repetitions: 10,
+            repetitionInterval: 2.5)
     }
     
     private var content: some View {
         Group {
-        switch viewModel.state {
+            switch viewModel.state {
             case .idle:
                 Color.clear
             case .gettingReady:
                 CountdownView(isAnimating: $isAnimating).transition(.identity)
             case .showingQuestion:
                 QuestionView(viewModel: viewModel.currentQuestion.value,
-                                    answer: $answer, code: $answerCode)
+                             answer: $answer, code: $answerCode)
             case .correctAnswer:
                 CorrectAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "")
             case .wrongAnswer:
                 WrongAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "")
             default:
                 GameOverView(replay: $replayPressed, ingame: $ingame,
-                                    viewModel: viewModel.getQuizResult())
+                             viewModel: viewModel.getQuizResult())
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        confettiCounter += 1
+                    }
+                }
             }
         }
     }
