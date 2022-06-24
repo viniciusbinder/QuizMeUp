@@ -98,7 +98,6 @@ struct GameOverView: View {
             .padding(.vertical, 5)
             .background(Color.attentionPink)
             .cornerRadius(12)
-            .erasedToAnyView
     }
 }
 

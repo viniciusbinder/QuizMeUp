@@ -28,7 +28,7 @@ struct QuestionView: View {
             Spacer()
             
             VStack(spacing: 19) {
-                ForEach(0..<viewModel.answers.count) { index in
+                ForEach(0..<viewModel.answers.count, id: \.self) { index in
                     Button {
                         self.answer = viewModel.answers[index]
                         self.code = AnswerCode.getCode(for: index)

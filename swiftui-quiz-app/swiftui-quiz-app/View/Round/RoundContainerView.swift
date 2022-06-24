@@ -69,21 +69,23 @@ struct RoundContainerView: View {
     }
     
     private var content: some View {
+        Group {
         switch viewModel.state {
-        case .idle:
-            return Color.clear.erasedToAnyView
-        case .gettingReady:
-            return CountdownView(isAnimating: $isAnimating).transition(.identity).erasedToAnyView
-        case .showingQuestion:
-            return QuestionView(viewModel: viewModel.currentQuestion.value,
-                                answer: $answer, code: $answerCode).erasedToAnyView
-        case .correctAnswer:
-            return CorrectAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "").erasedToAnyView
-        case .wrongAnswer:
-            return WrongAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "").erasedToAnyView
-        default:
-            return GameOverView(replay: $replayPressed, ingame: $ingame,
-                                viewModel: viewModel.getQuizResult()).erasedToAnyView
+            case .idle:
+                Color.clear
+            case .gettingReady:
+                CountdownView(isAnimating: $isAnimating).transition(.identity)
+            case .showingQuestion:
+                QuestionView(viewModel: viewModel.currentQuestion.value,
+                                    answer: $answer, code: $answerCode)
+            case .correctAnswer:
+                CorrectAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "")
+            case .wrongAnswer:
+                WrongAnswerView(isAnimating: $isAnimating, code: answerCode, text: answer ?? "")
+            default:
+                GameOverView(replay: $replayPressed, ingame: $ingame,
+                                    viewModel: viewModel.getQuizResult())
+            }
         }
     }
     

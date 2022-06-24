@@ -20,7 +20,7 @@ struct HomeView: View {
             Image("banner")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 30)
+                .padding(.top, 50)
                 .padding(.horizontal).padding(.horizontal)
             
             Spacer()
@@ -48,7 +48,9 @@ struct HomeView: View {
                     .cornerRadius(12)
                     .shadow(radius: 4)
                     .padding().padding(.horizontal)
-                    .overlay(viewModel.state == .loading ? ProgressView().progressViewStyle(CircularProgressViewStyle()).erasedToAnyView : EmptyView().erasedToAnyView)
+                    .overlay(viewModel.state == .loading
+                             ? AnyView(ProgressView().progressViewStyle(CircularProgressViewStyle()))
+                             : AnyView(EmptyView()))
             }
             .buttonStyle(PressableButtonStyle())
         }

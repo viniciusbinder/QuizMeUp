@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		560D8AC125E2BD8900AAD42D /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D8AC025E2BD8900AAD42D /* ContainerView.swift */; };
 		5622567C25E14042005F92FE /* DifficultyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622567B25E14042005F92FE /* DifficultyPickerView.swift */; };
-		5622568025E14112005F92FE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622567F25E14112005F92FE /* View.swift */; };
 		5622568525E141A4005F92FE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5622568425E141A4005F92FE /* Colors.xcassets */; };
 		5622568825E142C6005F92FE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622568725E142C6005F92FE /* Color.swift */; };
 		5638432225E2D1B4003E1102 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5638432125E2D1B4003E1102 /* HeaderView.swift */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		560D8AC025E2BD8900AAD42D /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		5622567B25E14042005F92FE /* DifficultyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyPickerView.swift; sourceTree = "<group>"; };
-		5622567F25E14112005F92FE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		5622568425E141A4005F92FE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5622568725E142C6005F92FE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5638432125E2D1B4003E1102 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -113,9 +111,6 @@
 		5622567E25E140E8005F92FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5622567F25E14112005F92FE /* View.swift */,
-				5622568725E142C6005F92FE /* Color.swift */,
-				563E6ACB25E1759D003AE32F /* Font.swift */,
 				565F3A6425E1E05D0016269C /* Path+Morph.swift */,
 			);
 			path = Extensions;
@@ -203,6 +198,8 @@
 		6407F9FC25E0B36E00EF3D80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5622568725E142C6005F92FE /* Color.swift */,
+				563E6ACB25E1759D003AE32F /* Font.swift */,
 				563E6AC525E1745D003AE32F /* Fonts */,
 				56B3C5E925E09BF200EEC80C /* Assets.xcassets */,
 				5622568425E141A4005F92FE /* Colors.xcassets */,
@@ -393,7 +390,6 @@
 				6407FA6525E2757500EF3D80 /* AnswerRowView.swift in Sources */,
 				565F3A6925E1E3F30016269C /* Star.swift in Sources */,
 				563E6AD325E17DD5003AE32F /* GameCenter.swift in Sources */,
-				5622568025E14112005F92FE /* View.swift in Sources */,
 				6407FA2425E0E53900EF3D80 /* CategoryViewModel.swift in Sources */,
 				6407FA1125E0BAFF00EF3D80 /* TriviaServiceProtocol.swift in Sources */,
 				563E6ACC25E1759D003AE32F /* Font.swift in Sources */,

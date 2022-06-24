@@ -31,7 +31,6 @@ struct WrongAnswerView: View {
                 
                 AnswerRowView(code: code, text: text)
             }
-            
         }
         .onAppear {
             isAnimating = true
