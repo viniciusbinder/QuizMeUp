@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct GameOverView: View {
     
     @Binding var replay: Bool
     @Binding var ingame: Bool
     let viewModel: QuizResultViewModel
+    
+    @State private var confettiCounter: Int = 0
 
     var body: some View {
         VStack {
-            Text("ROUND OVER")
+            Text("GAME OVER")
                 .font(.poppins(weight: .semibold, size: 30))
                 .foregroundColor(.white)
                 .frame(height: 50)
@@ -49,11 +52,14 @@ struct GameOverView: View {
                 Text("⭐️")
                     .font(.poppins(weight: .semibold, size: 30))
             }
+            .onAppear {
+                confettiCounter += 1
+            }
             
             Button {
                 replay = true
             } label: {
-                Text("🤬 Retry")
+                Text("Retry")
                     .font(.poppins(weight: .bold, size: 24))
                     .foregroundColor(.black)
                     .padding()
@@ -70,7 +76,7 @@ struct GameOverView: View {
                     ingame = false
                 }
             } label: {
-                Text("🤗 Exit")
+                Text("Exit")
                     .font(.poppins(weight: .bold, size: 24))
                     .foregroundColor(.black)
                     .padding()
@@ -84,7 +90,15 @@ struct GameOverView: View {
 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(Color.background.edgesIgnoringSafeArea(.all))
+        .background(Color.background.edgesIgnoringSafeArea(.all)
+            .confettiCannon(
+                counter: $confettiCounter,
+                num: 40,
+                confettiSize: 20,
+                rainHeight: 1200,
+                radius: 450,
+                repetitions: 10,
+                repetitionInterval: 2.5))
         .onAppear {
             replay = false
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		565F3A6225E1DE870016269C /* AnimatableVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F3A6125E1DE870016269C /* AnimatableVector.swift */; };
 		565F3A6525E1E05D0016269C /* Path+Morph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F3A6425E1E05D0016269C /* Path+Morph.swift */; };
 		565F3A6925E1E3F30016269C /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F3A6825E1E3F30016269C /* Star.swift */; };
+		5684B80128663839009D5BC6 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5684B80028663839009D5BC6 /* ConfettiSwiftUI */; };
 		56AB1ABE25E1596800AC7D9A /* SizeAwareness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AB1ABD25E1596800AC7D9A /* SizeAwareness.swift */; };
 		56B3C5E625E09BE900EEC80C /* QuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5E525E09BE900EEC80C /* QuizApp.swift */; };
 		56B3C5EA25E09BF200EEC80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B3C5E925E09BF200EEC80C /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5684B80128663839009D5BC6 /* ConfettiSwiftUI in Frameworks */,
 				563E6AD025E17B8F003AE32F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +312,9 @@
 			dependencies = (
 			);
 			name = "swiftui-quiz-app";
+			packageProductDependencies = (
+				5684B80028663839009D5BC6 /* ConfettiSwiftUI */,
+			);
 			productName = "swiftui-quiz-app";
 			productReference = 56B3C5E225E09BE900EEC80C /* swiftui-quiz-app.app */;
 			productType = "com.apple.product-type.application";
@@ -338,6 +343,9 @@
 				Base,
 			);
 			mainGroup = 56B3C5D925E09BE900EEC80C;
+			packageReferences = (
+				5684B7FF28663839009D5BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 56B3C5E325E09BE900EEC80C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5684B7FF28663839009D5BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5684B80028663839009D5BC6 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5684B7FF28663839009D5BC6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56B3C5DA25E09BE900EEC80C /* Project object */;
 }
