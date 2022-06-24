@@ -31,7 +31,6 @@ struct HomeView: View {
             DifficultyPickerView(selection: $difficulty, items: ["😌", "🧐", "🤯"])
                 .padding().padding(.horizontal)
             
-            // Play Button
             Button {
                 if viewModel.state != .loading {
                     withAnimation {
