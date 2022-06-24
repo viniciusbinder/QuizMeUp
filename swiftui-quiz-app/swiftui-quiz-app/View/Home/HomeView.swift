@@ -20,7 +20,7 @@ struct HomeView: View {
             Image("banner")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 50)
+                .padding(.top, 80)
                 .padding(.horizontal).padding(.horizontal)
             
             Spacer()
