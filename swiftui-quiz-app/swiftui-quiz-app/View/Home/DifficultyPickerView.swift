@@ -30,7 +30,7 @@ struct DifficultyPickerView: View {
                 .animation(.easeInOut(duration: 0.1))
             
             HStack(spacing: spacing) {
-                ForEach(items.indices) { index in
+                ForEach(items.indices, id: \.self) { index in
                     Button {
                         selection = index
                     } label: {

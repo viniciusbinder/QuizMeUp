@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct ContainerView: View {
     @ObservedObject private var viewModel = QuestionDataViewModel()
@@ -22,6 +23,7 @@ struct ContainerView: View {
                     .transition(.scale)
             }
         }
+        .background(Color.background.edgesIgnoringSafeArea(.all))
     }
 }
 

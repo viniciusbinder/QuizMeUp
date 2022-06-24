@@ -56,7 +56,6 @@ struct CategoryPickerView: View {
             .id("categoryView-\(index)")
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
             .animation(.easeIn)
-            .erasedToAnyView
     }
     
     private func swap(change: Int) {

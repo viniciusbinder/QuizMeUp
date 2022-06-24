@@ -12,7 +12,6 @@ struct QuizApp: App {
     var body: some Scene {
         WindowGroup {
             ContainerView()
-                .background(Color.background.edgesIgnoringSafeArea(.all))
         }
     }
 }
